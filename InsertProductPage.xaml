@@ -1,0 +1,17 @@
+﻿<Page x:Class="WPF_MYSQL_EF2.InsertProductPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:WPF_MYSQL_EF2"
+      mc:Ignorable="d" d:DesignWidth="800"
+      Title="InsertProductPage" Height="146">
+
+    <Grid Background="LightGray" Width="780" Height="130.04">
+        <TextBox x:Name="P_ProductName_txb" HorizontalAlignment="Left" TextWrapping="NoWrap" Text="Product_name" TextAlignment="Center" VerticalAlignment="Center" Width="111" Height="21" UndoLimit="99" Margin="33,0,0,0" RenderTransformOrigin="-0.198,0.579"/>
+        <TextBox x:Name="P_ProductPrice_txb" HorizontalAlignment="Left" TextWrapping="NoWrap" Text="Price of one product" TextAlignment="Center" VerticalAlignment="Center" Width="119" Height="21" UndoLimit="99" Margin="313,0,0,0"/>
+        <DatePicker x:Name="P_ExpirationDate_dp" HorizontalAlignment="Left" Margin="456,0,0,0" VerticalAlignment="Center" Height="21"/>
+        <Label Content="Expiration Date" HorizontalAlignment="Left" Margin="456,28,0,0" VerticalAlignment="Top" Width="102" Height="26" RenderTransformOrigin="0.123,0.52"/>
+        <TextBox x:Name="P_ProductFat_txb" HorizontalAlignment="Left" TextWrapping="NoWrap" Text="Product_fat" TextAlignment="Center" VerticalAlignment="Center" Width="111" Height="21" UndoLimit="99" Margin="173,0,0,0" RenderTransformOrigin="-0.198,0.579"/>
+    </Grid>
+</Page>

@@ -1,0 +1,20 @@
+﻿<Page x:Class="WPF_MYSQL_EF2.InsertOrderPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:WPF_MYSQL_EF2"
+      mc:Ignorable="d" d:DesignWidth="800"
+      Title="InsertOrderPage" Height="138">
+
+    <Grid Background="LightGray" Width="780" Height="130.04">
+        <TextBox x:Name="O_Storeid_txb" HorizontalAlignment="Left" Margin="16,0,0,0" TextWrapping="NoWrap" Text="Store_ID" TextAlignment="Center" VerticalAlignment="Center" Width="74" Height="21" UndoLimit="99"/>
+        <TextBox x:Name="O_Productid_txb" HorizontalAlignment="Left" Margin="116,0,0,0" TextWrapping="NoWrap" Text="Product_ID" TextAlignment="Center" VerticalAlignment="Center" Width="74" Height="21" UndoLimit="99"/>
+        <TextBox x:Name="O_AmountOrdered_txb" HorizontalAlignment="Left" TextWrapping="NoWrap" Text="Amount Ordered" TextAlignment="Center" VerticalAlignment="Center" Width="111" Height="21" UndoLimit="99" Margin="216,0,0,0"/>
+        <DatePicker x:Name="O_OrderDate_dp" HorizontalAlignment="Left" Margin="354,0,0,0" VerticalAlignment="Center" Height="21"/>
+        <Label Content="Order Date" HorizontalAlignment="Left" Margin="354,29,0,0" VerticalAlignment="Top" Width="102" Height="26" RenderTransformOrigin="0.123,0.52"/>
+        <TextBox x:Name="O_AmountDelivered_txb" HorizontalAlignment="Left" TextWrapping="NoWrap" Text="Amount Delivered" TextAlignment="Center" VerticalAlignment="Center" Width="111" Height="21" UndoLimit="99" Margin="477,0,0,0"/>
+        <DatePicker x:Name="O_DeliveryDate_dp" HorizontalAlignment="Left" Margin="604,0,0,0" VerticalAlignment="Center" Height="21"/>
+        <Label Content="Delivery Date" HorizontalAlignment="Left" Margin="604,29,0,0" VerticalAlignment="Top" Width="102" Height="26" RenderTransformOrigin="0.123,0.52"/>
+    </Grid>
+</Page>
