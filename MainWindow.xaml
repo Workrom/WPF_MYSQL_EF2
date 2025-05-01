@@ -11,7 +11,7 @@
             <ColumnDefinition Width="0*"/>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
-        <DataGrid x:Name="DGV1" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="0,0,0,275" AutoGenerateColumns="True" SelectedIndex="0" Grid.ColumnSpan="2"/>
+        <DataGrid x:Name="DGV1" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="0,0,0,275" AutoGenerateColumns="True" SelectedIndex="0" Grid.ColumnSpan="2" CurrentCellChanged="DGV1_CurrentCellChanged"/>
         <ComboBox x:Name="Query_cb" HorizontalAlignment="Left" Margin="12,342,0,0" VerticalAlignment="Top" Width="456" Height="73" Cursor="Hand" SelectionChanged="ComboBox_SelectionChanged" Grid.Column="1">
             <ComboBoxItem Content="1. Знайти магазини, які зробили хоч одне замовлення"/>
             <ComboBoxItem Content="2. Скільки всього замовлень зробив кожен магазин"/>
@@ -34,5 +34,6 @@
         <Button x:Name="Show_Products_b" Content="Show Products" Grid.ColumnSpan="2" HorizontalAlignment="Left" Margin="541,342,0,0" VerticalAlignment="Top" Height="22" Width="192" Click="Show_Products_b_Click"/>
         <Button x:Name="Show_Orders_b" Content="Show Orders" Grid.ColumnSpan="2" HorizontalAlignment="Left" Margin="541,368,0,0" VerticalAlignment="Top" Height="22" Width="192" Click="Show_Orders_b_Click"/>
         <Button x:Name="Show_Stores_b" Content="Show Stores" Grid.ColumnSpan="2" HorizontalAlignment="Left" Margin="541,393,0,0" VerticalAlignment="Top" Height="22" Width="192" Click="Show_Stores_b_Click"/>
+        <Button x:Name="Del_but" Content="Delete selected row" Grid.ColumnSpan="2" HorizontalAlignment="Left" Margin="541,170,0,0" VerticalAlignment="Top" Height="22" Width="192" Click="Button_Click_1"/>
     </Grid>
 </Window>

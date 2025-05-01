@@ -11,6 +11,7 @@ using System.Windows.Shapes;
 using WPF_MYSQL_EF2.Models;
 using Microsoft.EntityFrameworkCore;
 using System.Windows.Markup.Localizer;
+using Microsoft.Extensions.DependencyInjection;
 
 namespace WPF_MYSQL_EF2;
 
@@ -109,5 +110,47 @@ public partial class MainWindow : Window
     private void Show_Stores_b_Click(object sender, RoutedEventArgs e)
     {
         DGV1.ItemsSource = service.Select<Store>();
+    }
+
+    private void Button_Click_1(object sender, RoutedEventArgs e)
+    {
+        if (DGV1.SelectedItems.Count != 1)
+        {
+            MessageBox.Show("Please select exactly one row to delete.");
+            return;
+        }
+        object entity = DGV1.SelectedItem;
+        if (entity is Product product)
+        {
+            service.DeleteE(product);
+        }
+        else if (entity is Store store)
+        {
+            service.DeleteE(store);
+        }
+        else if (entity is Order order)
+        {
+            service.DeleteE(order);
+        }
+        else { MessageBox.Show("Unsuported entity type"); }
+    }
+
+    private void DGV1_CurrentCellChanged(object sender, EventArgs e)
+    {
+        DGV1.CommitEdit(DataGridEditingUnit.Cell, true);
+        DGV1.CommitEdit(DataGridEditingUnit.Row, true);
+
+        if (DGV1.CurrentItem is Product product)
+        {
+            service.UpdateE(product);
+        }
+        else if (DGV1.CurrentItem is Store store)
+        {
+            service.UpdateE(store);
+        }
+        else if (DGV1.CurrentItem is Order order)
+        {
+            service.UpdateE(order);
+        }
     }
 }

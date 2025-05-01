@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore.Query.Internal;
+﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Query.Internal;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -70,6 +71,17 @@ namespace WPF_MYSQL_EF2
             _context.SaveChanges();
         }
 
+        public void UpdateE<T>(T ent) where T : class
+        {
+            _context.Attach<T>(ent);
+            _context.Entry(ent).State = EntityState.Modified;
+            _context.SaveChanges();
+        }
+        public void DeleteE<T>(T ent) where T : class
+        {
+            _context.Set<T>().Remove(ent);
+            _context.SaveChanges();
+        }
         public List<Object> Select<T>() where T : class
         {
             return _context.Set<T>().Cast<object>().ToList();
